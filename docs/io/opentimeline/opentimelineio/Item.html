@@ -109,6 +109,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <pre>public class <span class="typeNameLabel">Item</span>
 extends <a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a></pre>
+<div class="block">An Item is a Composable that can be part of a Composition or Timeline.
+ More specifically, it is a Composable that has meaningful duration.
+ Can also hold effects and markers.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -224,12 +227,16 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAvailableRange(io.opentimeline.opentimelineio.ErrorStatus)">getAvailableRange</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Implemented by child classes, available range of media.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDuration(io.opentimeline.opentimelineio.ErrorStatus)">getDuration</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Convience wrapper for the trimmed_range.duration of the item.</div>
+</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>java.util.List&lt;<a href="Effect.html" title="class in io.opentimeline.opentimelineio">Effect</a>&gt;</code></td>
@@ -244,7 +251,9 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRangeInParent(io.opentimeline.opentimelineio.ErrorStatus)">getRangeInParent</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Find and return the untrimmed range of this item in the parent.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
@@ -256,29 +265,40 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTransformedTime(io.opentimeline.opentime.RationalTime,io.opentimeline.opentimelineio.Item,io.opentimeline.opentimelineio.ErrorStatus)">getTransformedTime</a></span>&#8203;(<a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&nbsp;time,
 <a href="Item.html" title="class in io.opentimeline.opentimelineio">Item</a>&nbsp;toItem,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Converts time t in the coordinate system of self to coordinate
+ system of toItem.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTransformedTimeRange(io.opentimeline.opentime.TimeRange,io.opentimeline.opentimelineio.Item,io.opentimeline.opentimelineio.ErrorStatus)">getTransformedTimeRange</a></span>&#8203;(<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;timeRange,
 <a href="Item.html" title="class in io.opentimeline.opentimelineio">Item</a>&nbsp;toItem,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Transforms timeRange to the range of child or this toItem.</div>
+</td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTrimmedRange(io.opentimeline.opentimelineio.ErrorStatus)">getTrimmedRange</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">The range after applying the source range.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTrimmedRangeInParent(io.opentimeline.opentimelineio.ErrorStatus)">getTrimmedRangeInParent</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Find and return the trimmed range of this item in the parent.</div>
+</td>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getVisibleRange(io.opentimeline.opentimelineio.ErrorStatus)">getVisibleRange</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">The range of this item's media visible to its parent.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code>boolean</code></td>
@@ -381,6 +401,8 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Composable.html#isVisible()">isVisible</a></code>&nbsp;in class&nbsp;<code><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>visibility of the Item. By default true.</dd>
 </dl>
 </section>
 </li>
@@ -391,6 +413,8 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Composable.html#isOverlapping()">isOverlapping</a></code>&nbsp;in class&nbsp;<code><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Return whether an Item is overlapping. By default false.</dd>
 </dl>
 </section>
 </li>
@@ -422,9 +446,14 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <section class="detail">
 <h3><a id="getDuration(io.opentimeline.opentimelineio.ErrorStatus)">getDuration</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a></span>&nbsp;<span class="memberName">getDuration</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Convience wrapper for the trimmed_range.duration of the item.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Composable.html#getDuration(io.opentimeline.opentimelineio.ErrorStatus)">getDuration</a></code>&nbsp;in class&nbsp;<code><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report in case this is not implemented in a sub-class.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>getTrimmedRange().duration</dd>
 </dl>
 </section>
 </li>
@@ -432,30 +461,67 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <section class="detail">
 <h3><a id="getAvailableRange(io.opentimeline.opentimelineio.ErrorStatus)">getAvailableRange</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getAvailableRange</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Implemented by child classes, available range of media.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report in case this is not implemented in a sub-class.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>available range of media</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getTrimmedRange(io.opentimeline.opentimelineio.ErrorStatus)">getTrimmedRange</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getTrimmedRange</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">The range after applying the source range.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report in case this is not implemented in a sub-class.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>range after applying the source range.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getVisibleRange(io.opentimeline.opentimelineio.ErrorStatus)">getVisibleRange</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getVisibleRange</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">The range of this item's media visible to its parent.
+ Includes handles revealed by adjacent transitions (if any).
+ This will always be larger or equal to trimmedRange.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report error in fetching visible range</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>range of this item's media visible to its parent.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getTrimmedRangeInParent(io.opentimeline.opentimelineio.ErrorStatus)">getTrimmedRangeInParent</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getTrimmedRangeInParent</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Find and return the trimmed range of this item in the parent.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report in case trimmedRange is not implemented in a sub-class.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>trimmed range in parent.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getRangeInParent(io.opentimeline.opentimelineio.ErrorStatus)">getRangeInParent</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getRangeInParent</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Find and return the untrimmed range of this item in the parent.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report in fetching range</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>untrimmed range of this item in the parent</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -464,6 +530,25 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a></span>&nbsp;<span class="memberName">getTransformedTime</span>&#8203;(<span class="arguments"><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&nbsp;time,
 <a href="Item.html" title="class in io.opentimeline.opentimelineio">Item</a>&nbsp;toItem,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Converts time t in the coordinate system of self to coordinate
+ system of toItem.
+ Note that this and toItem must be part of the same timeline (they must
+ have a common ancestor).
+ Example:
+ 0                      20
+ [------t----D----------]
+ [--A-][t----B---][--C--]
+ 100    101    110
+ 101 in B = 6 in D
+ t = t argument</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>time</code> - RationalTime to be transformed</dd>
+<dd><code>toItem</code> - the Item in whose coordinate the time is to be transformed</dd>
+<dd><code>errorStatus</code> - errorStatus to report error during transformation</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>time in the coordinate system of self to coordinate system of toItem</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -472,6 +557,15 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getTransformedTimeRange</span>&#8203;(<span class="arguments"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;timeRange,
 <a href="Item.html" title="class in io.opentimeline.opentimelineio">Item</a>&nbsp;toItem,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Transforms timeRange to the range of child or this toItem.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>timeRange</code> - timeRange to be transformed</dd>
+<dd><code>toItem</code> - the Item in whose coordinate the time is to be transformed</dd>
+<dd><code>errorStatus</code> - errorStatus to report error during transformation</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>timeRange in coordinate of toItem.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">

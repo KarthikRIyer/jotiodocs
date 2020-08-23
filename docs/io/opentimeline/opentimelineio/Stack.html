@@ -245,12 +245,16 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAvailableRange(io.opentimeline.opentimelineio.ErrorStatus)">getAvailableRange</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Implemented by child classes, available range of media.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>java.util.HashMap&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>,&#8203;<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRangeOfAllChildren(io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfAllChildren</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Return a HashMap mapping children to their range in this object.</div>
+</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
@@ -366,9 +370,15 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <section class="detail">
 <h3><a id="getAvailableRange(io.opentimeline.opentimelineio.ErrorStatus)">getAvailableRange</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getAvailableRange</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="Item.html#getAvailableRange(io.opentimeline.opentimelineio.ErrorStatus)">Item</a></code></span></div>
+<div class="block">Implemented by child classes, available range of media.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Item.html#getAvailableRange(io.opentimeline.opentimelineio.ErrorStatus)">getAvailableRange</a></code>&nbsp;in class&nbsp;<code><a href="Item.html" title="class in io.opentimeline.opentimelineio">Item</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report in case this is not implemented in a sub-class.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>available range of media</dd>
 </dl>
 </section>
 </li>
@@ -376,9 +386,15 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <section class="detail">
 <h3><a id="getRangeOfAllChildren(io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfAllChildren</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.util.HashMap&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>,&#8203;<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&gt;</span>&nbsp;<span class="memberName">getRangeOfAllChildren</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="Composition.html#getRangeOfAllChildren(io.opentimeline.opentimelineio.ErrorStatus)">Composition</a></code></span></div>
+<div class="block">Return a HashMap mapping children to their range in this object.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Composition.html#getRangeOfAllChildren(io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfAllChildren</a></code>&nbsp;in class&nbsp;<code><a href="Composition.html" title="class in io.opentimeline.opentimelineio">Composition</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report any error while fetching ranges</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a HashMap mapping children to their range in this object</dd>
 </dl>
 </section>
 </li>

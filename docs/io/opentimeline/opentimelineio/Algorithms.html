@@ -143,13 +143,17 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code><a href="Track.html" title="class in io.opentimeline.opentimelineio">Track</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#flattenStack(io.opentimeline.opentimelineio.Stack,io.opentimeline.opentimelineio.ErrorStatus)">flattenStack</a></span>&#8203;(<a href="Stack.html" title="class in io.opentimeline.opentimelineio">Stack</a>&nbsp;inStack,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Flatten a Stack, into a single Track.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="Track.html" title="class in io.opentimeline.opentimelineio">Track</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#flattenStack(java.util.List,io.opentimeline.opentimelineio.ErrorStatus)">flattenStack</a></span>&#8203;(java.util.List&lt;<a href="Track.html" title="class in io.opentimeline.opentimelineio">Track</a>&gt;&nbsp;tracks,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Flatten a Stack, into a single Track.</div>
+</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="Timeline.html" title="class in io.opentimeline.opentimelineio">Timeline</a></code></td>
@@ -167,7 +171,11 @@ extends java.lang.Object</pre>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#trackTrimmedToRange(io.opentimeline.opentimelineio.Track,io.opentimeline.opentime.TimeRange,io.opentimeline.opentimelineio.ErrorStatus)">trackTrimmedToRange</a></span>&#8203;(<a href="Track.html" title="class in io.opentimeline.opentimelineio">Track</a>&nbsp;inTrack,
 <a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;trimRange,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns a new track that is a copy of the inTrack, but with items
+ outside the trimRange removed and items on the ends trimmed to the
+ trimRange.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -212,6 +220,15 @@ extends java.lang.Object</pre>
 <h3><a id="flattenStack(io.opentimeline.opentimelineio.Stack,io.opentimeline.opentimelineio.ErrorStatus)">flattenStack</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Track.html" title="class in io.opentimeline.opentimelineio">Track</a></span>&nbsp;<span class="memberName">flattenStack</span>&#8203;(<span class="arguments"><a href="Stack.html" title="class in io.opentimeline.opentimelineio">Stack</a>&nbsp;inStack,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Flatten a Stack, into a single Track.
+ Note that the 1st Track is the bottom one, and the last is the top.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>inStack</code> - stack to flatten</dd>
+<dd><code>errorStatus</code> - errorStatus to report error during flattening</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>flattened track</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -219,6 +236,15 @@ extends java.lang.Object</pre>
 <h3><a id="flattenStack(java.util.List,io.opentimeline.opentimelineio.ErrorStatus)">flattenStack</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Track.html" title="class in io.opentimeline.opentimelineio">Track</a></span>&nbsp;<span class="memberName">flattenStack</span>&#8203;(<span class="arguments">java.util.List&lt;<a href="Track.html" title="class in io.opentimeline.opentimelineio">Track</a>&gt;&nbsp;tracks,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Flatten a Stack, into a single Track.
+ Note that the 1st Track is the bottom one, and the last is the top.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>tracks</code> - list of tracks to flatten</dd>
+<dd><code>errorStatus</code> - errorStatus to report error during flattening</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>flattened track</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -227,6 +253,20 @@ extends java.lang.Object</pre>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Track.html" title="class in io.opentimeline.opentimelineio">Track</a></span>&nbsp;<span class="memberName">trackTrimmedToRange</span>&#8203;(<span class="arguments"><a href="Track.html" title="class in io.opentimeline.opentimelineio">Track</a>&nbsp;inTrack,
 <a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;trimRange,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Returns a new track that is a copy of the inTrack, but with items
+ outside the trimRange removed and items on the ends trimmed to the
+ trimRange. Note that the track is never expanded, only shortened.
+ Please note that you could do nearly the same thing non-destructively by
+ just setting the Track's source_range but sometimes you want to really cut
+ away the stuff outside and that's what this function is meant for.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>inTrack</code> - track to be trimmed</dd>
+<dd><code>trimRange</code> - this is the range, which the track will be trimmed to</dd>
+<dd><code>errorStatus</code> - errorStatus to report error during trimming</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>trimmed track</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -241,6 +281,14 @@ extends java.lang.Object</pre>
  Please note that you could do nearly the same thing non-destructively by
  just setting the Track's sourceRange but sometimes you want to really cut
  away the stuff outside and that's what this function is meant for.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>inTimeline</code> - timeline to be trimmed</dd>
+<dd><code>trimRange</code> - this is the range, which the timeline will be trimmed to</dd>
+<dd><code>errorStatus</code> - errorStatus to report error during trimming</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>trimmed timeline</dd>
+</dl>
 </section>
 </li>
 </ul>

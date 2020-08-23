@@ -107,6 +107,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <pre>public class <span class="typeNameLabel">Composable</span>
 extends <a href="SerializableObjectWithMetadata.html" title="class in io.opentimeline.opentimelineio">SerializableObjectWithMetadata</a></pre>
+<div class="block">An object that can be composed by tracks.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -328,24 +329,42 @@ extends <a href="SerializableObjectWithMetadata.html" title="class in io.opentim
 <section class="detail">
 <h3><a id="isVisible()">isVisible</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isVisible</span>()</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the visibility of the Composable. By default true.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isOverlapping()">isOverlapping</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isOverlapping</span>()</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Return whether an Item is overlapping. By default false.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="parent()">parent</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Composition.html" title="class in io.opentimeline.opentimelineio">Composition</a></span>&nbsp;<span class="memberName">parent</span>()</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the parent Composable, or null if this has no parent.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getDuration(io.opentimeline.opentimelineio.ErrorStatus)">getDuration</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a></span>&nbsp;<span class="memberName">getDuration</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report in case this is not implemented in a sub-class.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the duration of the Composable object.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">

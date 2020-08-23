@@ -111,6 +111,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <pre>public class <span class="typeNameLabel">Composition</span>
 extends <a href="Item.html" title="class in io.opentimeline.opentimelineio">Item</a></pre>
+<div class="block">Base class for an OTIO Item that contains other Items.
+ Should be subclassed (for example by Track and Stack), not used directly.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -232,19 +234,26 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#appendChild(io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">appendChild</a></span>&#8203;(<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Append the child to the end of the Composition.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clearChildren()">clearChildren</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Remove all children from the composition and clear their parents.</div>
+</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>java.util.stream.Stream&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#eachChild(io.opentimeline.opentime.TimeRange,boolean,io.opentimeline.opentimelineio.ErrorStatus)">eachChild</a></span>&#8203;(<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;searchRange,
 boolean&nbsp;shallowSearch,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Stream that returns each child contained in the composition in
+ the order in which it is found.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>&lt;T extends <a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;<br>java.util.stream.Stream&lt;T&gt;</code></td>
@@ -252,13 +261,19 @@ boolean&nbsp;shallowSearch,
 java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 boolean&nbsp;shallowSearch,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Stream that returns each child of specified type contained in the composition in
+ the order in which it is found.</div>
+</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>&lt;T extends <a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;<br>java.util.stream.Stream&lt;T&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#eachChild(java.lang.Class,io.opentimeline.opentimelineio.ErrorStatus)">eachChild</a></span>&#8203;(java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Stream that returns each child of specified type contained in the composition in
+ the order in which it is found.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a></code></td>
@@ -266,14 +281,16 @@ boolean&nbsp;shallowSearch,
 boolean&nbsp;shallowSearch,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
 <td class="colLast">
-<div class="block">Return the child that overlaps with time search_time.</div>
+<div class="block">Return the child that overlaps with time searchTime.</div>
 </td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getChildAtTime(io.opentimeline.opentime.RationalTime,io.opentimeline.opentimelineio.ErrorStatus)">getChildAtTime</a></span>&#8203;(<a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&nbsp;searchTime,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Return the child that overlaps with time searchTime.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code>java.util.List&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;</code></td>
@@ -283,42 +300,59 @@ boolean&nbsp;shallowSearch,
 <tr class="altColor" id="i8">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCompositionKind()">getCompositionKind</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns a label specifying the kind of composition.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="../util/Pair.html" title="class in io.opentimeline.util">Pair</a>&lt;<a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>,&#8203;<a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHandlesOfChild(io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">getHandlesOfChild</a></span>&#8203;(<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">If media beyond the ends of this child are visible due to adjacent
+ Transitions (only applicable in a Track) then this will return the
+ head and tail offsets as a Pair of RationalTime objects.</div>
+</td>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code>java.util.HashMap&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>,&#8203;<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRangeOfAllChildren(io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfAllChildren</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Return a HashMap mapping children to their range in this object.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRangeOfChild(io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfChild</a></span>&#8203;(<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">The range of the child not trimmed based on this composition's sourceRange.</div>
+</td>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRangeOfChildAtIndex(int,io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfChildAtIndex</a></span>&#8203;(int&nbsp;index,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Return the range of a child item in the time range of this composition.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTrimmedRangeOfChild(io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">getTrimmedRangeOfChild</a></span>&#8203;(<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Get range of the child, after the sourceRange is applied.</div>
+</td>
 </tr>
 <tr class="altColor" id="i14">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTrimmedRangeOfChildAtIndex(int,io.opentimeline.opentimelineio.ErrorStatus)">getTrimmedRangeOfChildAtIndex</a></span>&#8203;(int&nbsp;index,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Return the trimmed range of the child item at index in the time
+ range of this composition.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i15">
 <td class="colFirst"><code>boolean</code></td>
@@ -330,7 +364,9 @@ boolean&nbsp;shallowSearch,
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insertChild(int,io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">insertChild</a></span>&#8203;(int&nbsp;index,
 <a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Insert a child Composable at an index.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i17">
 <td class="colFirst"><code>boolean</code></td>
@@ -341,20 +377,26 @@ boolean&nbsp;shallowSearch,
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeChild(int,io.opentimeline.opentimelineio.ErrorStatus)">removeChild</a></span>&#8203;(int&nbsp;index,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Remove the child at any index.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i19">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setChild(int,io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">setChild</a></span>&#8203;(int&nbsp;index,
 <a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Set the child at a particular index.</div>
+</td>
 </tr>
 <tr class="altColor" id="i20">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setChildren(java.util.List,io.opentimeline.opentimelineio.ErrorStatus)">setChildren</a></span>&#8203;(java.util.List&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;&nbsp;children,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Set children for this Composition.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i21">
 <td class="colFirst"><code>java.lang.String</code></td>
@@ -364,7 +406,9 @@ boolean&nbsp;shallowSearch,
 <tr class="altColor" id="i22">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#trimChildRange(io.opentimeline.opentime.TimeRange)">trimChildRange</a></span>&#8203;(<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;childRange)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Trim childRange to this.sourceRange</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -449,18 +493,28 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <section class="detail">
 <h3><a id="getCompositionKind()">getCompositionKind</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.lang.String</span>&nbsp;<span class="memberName">getCompositionKind</span>()</div>
+<div class="block">Returns a label specifying the kind of composition.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the composition kind</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getChildren()">getChildren</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.util.List&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;</span>&nbsp;<span class="memberName">getChildren</span>()</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>all the chidlren held by this Composition.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="clearChildren()">clearChildren</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">clearChildren</span>()</div>
+<div class="block">Remove all children from the composition and clear their parents.</div>
 </section>
 </li>
 <li class="blockList">
@@ -468,6 +522,12 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <h3><a id="setChildren(java.util.List,io.opentimeline.opentimelineio.ErrorStatus)">setChildren</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setChildren</span>&#8203;(<span class="arguments">java.util.List&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;&nbsp;children,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Set children for this Composition.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>children</code> - a list of Composables</dd>
+<dd><code>errorStatus</code> - errorStatus to report an error if any child cannot be added.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -476,6 +536,15 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">insertChild</span>&#8203;(<span class="arguments">int&nbsp;index,
 <a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Insert a child Composable at an index.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>index</code> - index at which child is to be inserted.</dd>
+<dd><code>child</code> - child Composable to be inserted.</dd>
+<dd><code>errorStatus</code> - errorStatus to report an error if child cannot be inserted.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>was the child inserted successfully?</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -484,6 +553,15 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">setChild</span>&#8203;(<span class="arguments">int&nbsp;index,
 <a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Set the child at a particular index. The needs to exist for the child to be set.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>index</code> - index to set the child</dd>
+<dd><code>child</code> - child Composable to be set</dd>
+<dd><code>errorStatus</code> - errorStatus to report an error if child cannot be set.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>was the child set successfully?</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -491,6 +569,14 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <h3><a id="removeChild(int,io.opentimeline.opentimelineio.ErrorStatus)">removeChild</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">removeChild</span>&#8203;(<span class="arguments">int&nbsp;index,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Remove the child at any index.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>index</code> - index from which the child needs to be removed.</dd>
+<dd><code>errorStatus</code> - errorStatus to report an error if child cannot be removed.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>was the child removed successfully?</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -498,12 +584,26 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <h3><a id="appendChild(io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">appendChild</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">appendChild</span>&#8203;(<span class="arguments"><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Append the child to the end of the Composition.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>child</code> - child to be appended</dd>
+<dd><code>errorStatus</code> - errorStatus to report an error if child cannot be appended.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>was the child appended successfully?</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="isParentOf(io.opentimeline.opentimelineio.Composable)">isParentOf</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">isParentOf</span>&#8203;(<span class="arguments"><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;composable)</span></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>composable</code> - Composable to check ancestry of</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if this is a parent or ancestor of the composable.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -511,6 +611,18 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <h3><a id="getHandlesOfChild(io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">getHandlesOfChild</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/Pair.html" title="class in io.opentimeline.util">Pair</a>&lt;<a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>,&#8203;<a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&gt;</span>&nbsp;<span class="memberName">getHandlesOfChild</span>&#8203;(<span class="arguments"><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">If media beyond the ends of this child are visible due to adjacent
+ Transitions (only applicable in a Track) then this will return the
+ head and tail offsets as a Pair of RationalTime objects. If no handles
+ are present on either side, then null is returned instead of a
+ RationalTime.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>child</code> - child Composable to get handles</dd>
+<dd><code>errorStatus</code> - errorStatus to report error while fetching handles</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>head and tail offsets as a Pair of RationalTime objects</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -518,6 +630,18 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <h3><a id="getRangeOfChildAtIndex(int,io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfChildAtIndex</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getRangeOfChildAtIndex</span>&#8203;(<span class="arguments">int&nbsp;index,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Return the range of a child item in the time range of this composition.
+ For example, with a track:
+ [ClipA][ClipB][ClipC]
+ this.getRangeOfChildAtIndex(2, errorStatus) will return:
+ TimeRange(ClipA.duration + ClipB.duration, ClipC.duration)</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>index</code> - index of child whose range is to be fetched</dd>
+<dd><code>errorStatus</code> - errorStatus to report error if range cannot be fetched</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>range of child at index</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -525,6 +649,22 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <h3><a id="getTrimmedRangeOfChildAtIndex(int,io.opentimeline.opentimelineio.ErrorStatus)">getTrimmedRangeOfChildAtIndex</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getTrimmedRangeOfChildAtIndex</span>&#8203;(<span class="arguments">int&nbsp;index,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Return the trimmed range of the child item at index in the time
+ range of this composition.
+ <p>
+ For example, with a track:
+             [     ]
+ [ClipA][ClipB][ClipC]
+ The range of index 2 (ClipC) will be just like
+ getRangeOfChildAtIndex() but trimmed based on this Composition's
+ sourceRange.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>index</code> - index of child whose trimmed range is to be fetched</dd>
+<dd><code>errorStatus</code> - errorStatus to report error if trimmed range cannot be fetched</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>trimmed range of child at index</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -532,6 +672,23 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <h3><a id="getRangeOfChild(io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfChild</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getRangeOfChild</span>&#8203;(<span class="arguments"><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">The range of the child not trimmed based on this composition's sourceRange.
+ For example:
+ |     [-----]     | seq
+ [-----------------] Clip A
+ If ClipA has duration 17, and seq has sourceRange: 5, duration 15,
+ seq.getRangeOfChild(Clip A) will return (0, 17)
+ ignoring the sourceRange of seq.
+ <p>
+ To get the range of the child with the sourceRange applied, use the
+ getTrimmedRangeOfChild() method.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>child</code> - child Composable whose range is to be fetched</dd>
+<dd><code>errorStatus</code> - errorStatus to report error if range cannot be fetched</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>range of the child not trimmed based on this composition's sourceRange</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -539,24 +696,66 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <h3><a id="getTrimmedRangeOfChild(io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">getTrimmedRangeOfChild</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getTrimmedRangeOfChild</span>&#8203;(<span class="arguments"><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Get range of the child, after the sourceRange is applied.
+ Example
+ |     [-----]     | seq
+ [-----------------] Clip A
+ If ClipA has duration 17, and seq has sourceRange: 5, duration 10,
+ seq.getTrimmedRangeOfChild(Clip A) will return (5, 10)
+ Which is trimming the range according to the sourceRange of seq.
+ To get the range of the child without the sourceRange applied, use the
+ getRangeOfChild() method.
+ Another example
+ |  [-----]   | seq sourceRange starts on frame 4 and goes to frame 8
+ [ClipA][ClipB] (each 6 frames long)
+ <p>
+ seq.getRangeOfChild(ClipA) = 0, duration 6
+ seq.getTrimmedRangeOfChild(ClipB) = 4, duration 2</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>child</code> - child Composable whose trimmed range is to be fetched</dd>
+<dd><code>errorStatus</code> - errorStatus to report error if range cannot be fetched</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>range of the child trimmed based on this composition's sourceRange</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="trimChildRange(io.opentimeline.opentime.TimeRange)">trimChildRange</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">trimChildRange</span>&#8203;(<span class="arguments"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;childRange)</span></div>
+<div class="block">Trim childRange to this.sourceRange</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>childRange</code> - range to be trimmed</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>null if childRange has no intersection with this.sourceRange, else trimmed range</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="hasChild(io.opentimeline.opentimelineio.Composable)">hasChild</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">hasChild</span>&#8203;(<span class="arguments"><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child)</span></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>child</code> - child to find</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>does the composition contain the child?</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getRangeOfAllChildren(io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfAllChildren</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.util.HashMap&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>,&#8203;<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&gt;</span>&nbsp;<span class="memberName">getRangeOfAllChildren</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Return a HashMap mapping children to their range in this object.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report any error while fetching ranges</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a HashMap mapping children to their range in this object</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -565,11 +764,17 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a></span>&nbsp;<span class="memberName">getChildAtTime</span>&#8203;(<span class="arguments"><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&nbsp;searchTime,
 boolean&nbsp;shallowSearch,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
-<div class="block">Return the child that overlaps with time search_time.
- <p>
- search_time is in the space of self.
- <p>
- If shallow_search is false, will recurse into compositions.</div>
+<div class="block">Return the child that overlaps with time searchTime.
+ searchTime is in the space of self.
+ If shallowSearch is false, will recurse into compositions.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>searchTime</code> - the time at which the child is to be fetched</dd>
+<dd><code>shallowSearch</code> - should the algorithm recurse into compositions or not?</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while fetching the child</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the child that overlaps with time searchTime</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -577,6 +782,16 @@ boolean&nbsp;shallowSearch,
 <h3><a id="getChildAtTime(io.opentimeline.opentime.RationalTime,io.opentimeline.opentimelineio.ErrorStatus)">getChildAtTime</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a></span>&nbsp;<span class="memberName">getChildAtTime</span>&#8203;(<span class="arguments"><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&nbsp;searchTime,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Return the child that overlaps with time searchTime.
+ searchTime is in the space of self.
+ This function will recurse into compositions.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>searchTime</code> - the time at which the child is to be fetched</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while fetching the child</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the child that overlaps with time searchTime</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -587,6 +802,19 @@ boolean&nbsp;shallowSearch,
 java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 boolean&nbsp;shallowSearch,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Stream that returns each child of specified type contained in the composition in
+ the order in which it is found.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - type of children to fetch</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>searchRange</code> - if not null, only children whose range overlaps with the search range will be in the stream.</dd>
+<dd><code>descendedFrom</code> - only children who are a descendent of the descendedFrom type will be in the stream</dd>
+<dd><code>shallowSearch</code> - should the algorithm recurse into compositions or not?</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while recursing</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a Stream consisting of all the children of specified type in the composition in the order in which it is found</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -595,6 +823,15 @@ boolean&nbsp;shallowSearch,
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.util.stream.Stream&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;</span>&nbsp;<span class="memberName">eachChild</span>&#8203;(<span class="arguments"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;searchRange,
 boolean&nbsp;shallowSearch,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Stream that returns each child contained in the composition in
+ the order in which it is found.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>searchRange</code> - if not null, only children whose range overlaps with the search range will be in the stream.</dd>
+<dd><code>shallowSearch</code> - should the algorithm recurse into compositions or not?</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while recursing</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -603,6 +840,16 @@ boolean&nbsp;shallowSearch,
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;</span>
 <span class="returnType">java.util.stream.Stream&lt;T&gt;</span>&nbsp;<span class="memberName">eachChild</span>&#8203;(<span class="arguments">java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Stream that returns each child of specified type contained in the composition in
+ the order in which it is found. This stream will recurse into compositions.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - type of children to fetch</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>descendedFrom</code> - only children who are a descendent of the descendedFrom type will be in the stream</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while recursing</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </section>
 </li>
 <li class="blockList">

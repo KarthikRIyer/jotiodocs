@@ -144,14 +144,18 @@ extends java.lang.Object</pre>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deserializeJSONFromFile(java.lang.String,io.opentimeline.opentimelineio.Any,io.opentimeline.opentimelineio.ErrorStatus)">deserializeJSONFromFile</a></span>&#8203;(java.lang.String&nbsp;fileName,
 <a href="Any.html" title="class in io.opentimeline.opentimelineio">Any</a>&nbsp;destination,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Deserialize an OTIO JSON file and get the result in an Any object.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deserializeJSONFromString(java.lang.String,io.opentimeline.opentimelineio.Any,io.opentimeline.opentimelineio.ErrorStatus)">deserializeJSONFromString</a></span>&#8203;(java.lang.String&nbsp;input,
 <a href="Any.html" title="class in io.opentimeline.opentimelineio">Any</a>&nbsp;destination,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Deserialize an OTIO JSON String and get the result in an Any object.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -197,6 +201,15 @@ extends java.lang.Object</pre>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">deserializeJSONFromString</span>&#8203;(<span class="arguments">java.lang.String&nbsp;input,
 <a href="Any.html" title="class in io.opentimeline.opentimelineio">Any</a>&nbsp;destination,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Deserialize an OTIO JSON String and get the result in an Any object.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>input</code> - JSON String</dd>
+<dd><code>destination</code> - JSON will be deserialized into this object</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while deserialization</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>was the JSON deserialized successfully?</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -205,6 +218,15 @@ extends java.lang.Object</pre>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">deserializeJSONFromFile</span>&#8203;(<span class="arguments">java.lang.String&nbsp;fileName,
 <a href="Any.html" title="class in io.opentimeline.opentimelineio">Any</a>&nbsp;destination,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Deserialize an OTIO JSON file and get the result in an Any object.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>fileName</code> - path to JSON file</dd>
+<dd><code>destination</code> - JSON will be deserialized into this object</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while deserialization</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>was the JSON deserialized successfully?</dd>
+</dl>
 </section>
 </li>
 </ul>
