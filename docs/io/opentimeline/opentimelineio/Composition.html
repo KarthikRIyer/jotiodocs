@@ -653,7 +653,7 @@ java.util.List&lt;<a href="Marker.html" title="class in io.opentimeline.opentime
  range of this composition.
  <p>
  For example, with a track:
-             [     ]
+ [     ]
  [ClipA][ClipB][ClipC]
  The range of index 2 (ClipC) will be just like
  getRangeOfChildAtIndex() but trimmed based on this Composition's
@@ -811,7 +811,7 @@ boolean&nbsp;shallowSearch,
 <dd><code>searchRange</code> - if not null, only children whose range overlaps with the search range will be in the stream.</dd>
 <dd><code>descendedFrom</code> - only children who are a descendent of the descendedFrom type will be in the stream</dd>
 <dd><code>shallowSearch</code> - should the algorithm recurse into compositions or not?</dd>
-<dd><code>errorStatus</code> - errorStatus to report any error while recursing</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while iterating</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a Stream consisting of all the children of specified type in the composition in the order in which it is found</dd>
 </dl>
@@ -829,8 +829,9 @@ boolean&nbsp;shallowSearch,
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>searchRange</code> - if not null, only children whose range overlaps with the search range will be in the stream.</dd>
 <dd><code>shallowSearch</code> - should the algorithm recurse into compositions or not?</dd>
-<dd><code>errorStatus</code> - errorStatus to report any error while recursing</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while iterating</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
+<dd>a Stream consisting of all the children in the composition (in the searchRange) in the order in which it is found</dd>
 </dl>
 </section>
 </li>
@@ -847,8 +848,9 @@ boolean&nbsp;shallowSearch,
 <dd><code>T</code> - type of children to fetch</dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>descendedFrom</code> - only children who are a descendent of the descendedFrom type will be in the stream</dd>
-<dd><code>errorStatus</code> - errorStatus to report any error while recursing</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while iterating</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
+<dd>a Stream consisting of all the children of specified type in the composition in the order in which it is found</dd>
 </dl>
 </section>
 </li>

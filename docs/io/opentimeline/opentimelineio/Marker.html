@@ -103,6 +103,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <pre>public class <span class="typeNameLabel">Marker</span>
 extends <a href="SerializableObjectWithMetadata.html" title="class in io.opentimeline.opentimelineio">SerializableObjectWithMetadata</a></pre>
+<div class="block">Holds metadata over time on a timeline</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -222,17 +223,26 @@ java.lang.String&nbsp;color,
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMarkedRange()">getMarkedRange</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Get range this marker applies to, relative to the Item this marker is
+ attached to (e.g.</div>
+</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setColor(java.lang.String)">setColor</a></span>&#8203;(java.lang.String&nbsp;color)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Set color string for this marker (for example: 'RED'), based on the
+ Color class.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMarkedRange(io.opentimeline.opentime.TimeRange)">setMarkedRange</a></span>&#8203;(<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;markedRange)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Set range this marker applies to, relative to the Item this marker is
+ attached to (e.g.</div>
+</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>java.lang.String</code></td>
@@ -311,24 +321,46 @@ java.lang.String&nbsp;color,
 <section class="detail">
 <h3><a id="getColor()">getColor</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.lang.String</span>&nbsp;<span class="memberName">getColor</span>()</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the color string for this marker (for example: 'RED').</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setColor(java.lang.String)">setColor</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setColor</span>&#8203;(<span class="arguments">java.lang.String&nbsp;color)</span></div>
+<div class="block">Set color string for this marker (for example: 'RED'), based on the
+ Color class.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>color</code> - String color</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getMarkedRange()">getMarkedRange</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getMarkedRange</span>()</div>
+<div class="block">Get range this marker applies to, relative to the Item this marker is
+ attached to (e.g. the Clip or Track that owns this marker).</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>TimeRange this marker applies to.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setMarkedRange(io.opentimeline.opentime.TimeRange)">setMarkedRange</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setMarkedRange</span>&#8203;(<span class="arguments"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;markedRange)</span></div>
+<div class="block">Set range this marker applies to, relative to the Item this marker is
+ attached to (e.g. the Clip or Track that owns this marker).</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>markedRange</code> - TimeRange this marker applies to.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">

@@ -103,6 +103,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <pre>public static enum <span class="typeNameLabel">ImageSequenceReference.MissingFramePolicy</span>
 extends java.lang.Enum&lt;<a href="ImageSequenceReference.MissingFramePolicy.html" title="enum in io.opentimeline.opentimelineio">ImageSequenceReference.MissingFramePolicy</a>&gt;</pre>
+<div class="block">enum ImageSequenceReference.MissingFramePolicy directive for
+ how frames in sequence not found on disk should be handled.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -137,15 +139,21 @@ extends java.lang.Enum&lt;<a href="ImageSequenceReference.MissingFramePolicy.htm
 <tbody>
 <tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#black">black</a></span></code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Application should use a black frame in place of the missing frame.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#error">error</a></span></code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Application should abort and raise an error.</div>
+</td>
 </tr>
 <tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#hold">hold</a></span></code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Application should hold the last available frame before the missing frame.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -216,18 +224,21 @@ the order they are declared.</div>
 <section class="detail">
 <h3><a id="error">error</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="ImageSequenceReference.MissingFramePolicy.html" title="enum in io.opentimeline.opentimelineio">ImageSequenceReference.MissingFramePolicy</a></span>&nbsp;<span class="memberName">error</span></div>
+<div class="block">Application should abort and raise an error.</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="hold">hold</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="ImageSequenceReference.MissingFramePolicy.html" title="enum in io.opentimeline.opentimelineio">ImageSequenceReference.MissingFramePolicy</a></span>&nbsp;<span class="memberName">hold</span></div>
+<div class="block">Application should hold the last available frame before the missing frame.</div>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="black">black</a></h3>
 <div class="memberSignature"><span class="modifiers">public static final</span>&nbsp;<span class="returnType"><a href="ImageSequenceReference.MissingFramePolicy.html" title="enum in io.opentimeline.opentimelineio">ImageSequenceReference.MissingFramePolicy</a></span>&nbsp;<span class="memberName">black</span></div>
+<div class="block">Application should use a black frame in place of the missing frame.</div>
 </section>
 </li>
 </ul>

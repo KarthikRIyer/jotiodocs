@@ -103,7 +103,6 @@ extends java.lang.Object</pre>
  The duration on a TimeRange indicates a time range that is inclusive of the start time,
  and exclusive of the end time. All of the predicates are computed accordingly.
  <p>
- <p>
  This default epsilon value is used in comparison between floating numbers.
  It is computed to be twice 192khz, the fastest commonly used audio rate.
  It can be changed in the future if necessary due to higher sampling rates
@@ -583,6 +582,8 @@ double&nbsp;epsilon)</code></th>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - RationalTime to check for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>does this contain other</dd>
 </dl>
 </section>
 </li>
@@ -598,6 +599,8 @@ double&nbsp;epsilon)</code></th>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - TimeRange to check for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>does this contain other</dd>
 </dl>
 </section>
 </li>
@@ -613,6 +616,8 @@ double&nbsp;epsilon)</code></th>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - RationalTime to check for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>does this overlap other</dd>
 </dl>
 </section>
 </li>
@@ -630,6 +635,8 @@ double&nbsp;epsilon)</span></div>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - TimeRange to check for</dd>
 <dd><code>epsilon</code> - comparison tolerance</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>does this overlap other</dd>
 </dl>
 </section>
 </li>
@@ -646,6 +653,8 @@ double&nbsp;epsilon)</span></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - TimeRange to check for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>does this overlap other</dd>
 </dl>
 </section>
 </li>
@@ -661,6 +670,8 @@ double&nbsp;epsilon)</span></div>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - TimeRange to check for</dd>
 <dd><code>epsilon</code> - comparison tolerance</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>is this before other</dd>
 </dl>
 </section>
 </li>
@@ -675,6 +686,8 @@ double&nbsp;epsilon)</span></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - TimeRange to check for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>is this before other</dd>
 </dl>
 </section>
 </li>
@@ -691,6 +704,8 @@ double&nbsp;epsilon)</span></div>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - RationalTime to check for</dd>
 <dd><code>epsilon</code> - comparison tolerance</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>is this before other</dd>
 </dl>
 </section>
 </li>
@@ -706,6 +721,8 @@ double&nbsp;epsilon)</span></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - RationalTime to check for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>is this before other</dd>
 </dl>
 </section>
 </li>
@@ -722,6 +739,8 @@ double&nbsp;epsilon)</span></div>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - TimeRange to check for</dd>
 <dd><code>epsilon</code> - comparison tolerance</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>does this meet other</dd>
 </dl>
 </section>
 </li>
@@ -737,6 +756,8 @@ double&nbsp;epsilon)</span></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - TimeRange to check for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>does this meet other</dd>
 </dl>
 </section>
 </li>
@@ -754,6 +775,8 @@ double&nbsp;epsilon)</span></div>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - TimeRange to check for</dd>
 <dd><code>epsilon</code> - comparison tolerance</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>do the beginnings of both match</dd>
 </dl>
 </section>
 </li>
@@ -770,6 +793,8 @@ double&nbsp;epsilon)</span></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - TimeRange to check for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>do the beginnings of both match</dd>
 </dl>
 </section>
 </li>
@@ -786,6 +811,9 @@ double&nbsp;epsilon)</span></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - RationalTime to check for</dd>
+<dd><code>epsilon</code> - comparison tolerance</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>does the RationalTime match the beginning of this</dd>
 </dl>
 </section>
 </li>
@@ -802,6 +830,8 @@ double&nbsp;epsilon)</span></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - RationalTime to check for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>does the RationalTime match the beginning of this</dd>
 </dl>
 </section>
 </li>
@@ -819,6 +849,8 @@ double&nbsp;epsilon)</span></div>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - TimeRange to check for</dd>
 <dd><code>epsilon</code> - comparison tolerance</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>do the ends of both match</dd>
 </dl>
 </section>
 </li>
@@ -835,6 +867,8 @@ double&nbsp;epsilon)</span></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - TimeRange to check for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>do the ends of both match</dd>
 </dl>
 </section>
 </li>
@@ -844,14 +878,16 @@ double&nbsp;epsilon)</span></div>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">finishes</span>&#8203;(<span class="arguments"><a href="RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&nbsp;other,
 double&nbsp;epsilon)</span></div>
 <div class="block">The end of <b>this</b> strictly equals <b>other</b>.
- other
- â†“
- *
+      other
+        â†“
+        *
  [ this ]</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - RationalTime to check for</dd>
 <dd><code>epsilon</code> - comparison tolerance</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>does the RationalTime match the end of this</dd>
 </dl>
 </section>
 </li>
@@ -860,13 +896,15 @@ double&nbsp;epsilon)</span></div>
 <h3><a id="finishes(io.opentimeline.opentime.RationalTime)">finishes</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">finishes</span>&#8203;(<span class="arguments"><a href="RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&nbsp;other)</span></div>
 <div class="block">The end of <b>this</b> strictly equals <b>other</b>.
- other
- â†“
- *
+      other
+        â†“
+        *
  [ this ]</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - RationalTime to check for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>does the RationalTime match the end of this</dd>
 </dl>
 </section>
 </li>
@@ -903,6 +941,7 @@ double&nbsp;epsilon)</span></div>
 <dd><code>startTime</code> - start time</dd>
 <dd><code>endTime</code> - end time</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
+<dd>TimeRange from start and end RationalTimes</dd>
 </dl>
 </section>
 </li>

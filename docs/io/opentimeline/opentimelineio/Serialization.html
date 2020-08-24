@@ -144,7 +144,9 @@ extends java.lang.Object</pre>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serializeJSONToFile(io.opentimeline.opentimelineio.Any,java.lang.String,io.opentimeline.opentimelineio.ErrorStatus)">serializeJSONToFile</a></span>&#8203;(<a href="Any.html" title="class in io.opentimeline.opentimelineio">Any</a>&nbsp;value,
 java.lang.String&nbsp;fileName,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Serialize any OTIO object contained in an Any to a file with a default indent of 4.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>boolean</code></td>
@@ -152,20 +154,26 @@ java.lang.String&nbsp;fileName,
 java.lang.String&nbsp;fileName,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus,
 int&nbsp;indent)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Serialize any OTIO object contained in an Any to a file.</div>
+</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serializeJSONToString(io.opentimeline.opentimelineio.Any,io.opentimeline.opentimelineio.ErrorStatus)">serializeJSONToString</a></span>&#8203;(<a href="Any.html" title="class in io.opentimeline.opentimelineio">Any</a>&nbsp;value,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Serialize any OTIO object contained in an Any to a String with a default indent of 4.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#serializeJSONToString(io.opentimeline.opentimelineio.Any,io.opentimeline.opentimelineio.ErrorStatus,int)">serializeJSONToString</a></span>&#8203;(<a href="Any.html" title="class in io.opentimeline.opentimelineio">Any</a>&nbsp;value,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus,
 int&nbsp;indent)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Serialize any OTIO object contained in an Any to a String.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -211,6 +219,15 @@ int&nbsp;indent)</code></th>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.lang.String</span>&nbsp;<span class="memberName">serializeJSONToString</span>&#8203;(<span class="arguments"><a href="Any.html" title="class in io.opentimeline.opentimelineio">Any</a>&nbsp;value,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus,
 int&nbsp;indent)</span></div>
+<div class="block">Serialize any OTIO object contained in an Any to a String.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>value</code> - Any to be serialized</dd>
+<dd><code>errorStatus</code> - errorStatus to report error during serialization</dd>
+<dd><code>indent</code> - number of spaces to use for indentation in JSON</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>serialized OTIO object</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -218,6 +235,14 @@ int&nbsp;indent)</span></div>
 <h3><a id="serializeJSONToString(io.opentimeline.opentimelineio.Any,io.opentimeline.opentimelineio.ErrorStatus)">serializeJSONToString</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.lang.String</span>&nbsp;<span class="memberName">serializeJSONToString</span>&#8203;(<span class="arguments"><a href="Any.html" title="class in io.opentimeline.opentimelineio">Any</a>&nbsp;value,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Serialize any OTIO object contained in an Any to a String with a default indent of 4.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>value</code> - Any to be serialized</dd>
+<dd><code>errorStatus</code> - errorStatus to report error during serialization</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>serialized OTIO object</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -227,6 +252,16 @@ int&nbsp;indent)</span></div>
 java.lang.String&nbsp;fileName,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus,
 int&nbsp;indent)</span></div>
+<div class="block">Serialize any OTIO object contained in an Any to a file.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>value</code> - Any to be serialized</dd>
+<dd><code>fileName</code> - path to file</dd>
+<dd><code>errorStatus</code> - errorStatus to report error during serialization</dd>
+<dd><code>indent</code> - number of spaces to use for indentation in JSON</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>was the object serialized and was the file created successfully?</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -235,6 +270,15 @@ int&nbsp;indent)</span></div>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">boolean</span>&nbsp;<span class="memberName">serializeJSONToFile</span>&#8203;(<span class="arguments"><a href="Any.html" title="class in io.opentimeline.opentimelineio">Any</a>&nbsp;value,
 java.lang.String&nbsp;fileName,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Serialize any OTIO object contained in an Any to a file with a default indent of 4.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>value</code> - Any to be serialized</dd>
+<dd><code>fileName</code> - path to file</dd>
+<dd><code>errorStatus</code> - errorStatus to report error during serialization</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>was the object serialized and was the file created successfully?</dd>
+</dl>
 </section>
 </li>
 </ul>

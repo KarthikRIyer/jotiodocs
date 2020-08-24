@@ -103,6 +103,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <pre>public class <span class="typeNameLabel">Timeline</span>
 extends <a href="SerializableObjectWithMetadata.html" title="class in io.opentimeline.opentimelineio">SerializableObjectWithMetadata</a></pre>
+<div class="block">A class that contains a Stack.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -212,57 +213,78 @@ extends <a href="SerializableObjectWithMetadata.html" title="class in io.opentim
 <td class="colFirst"><code>java.util.stream.Stream&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#eachChild(io.opentimeline.opentime.TimeRange,io.opentimeline.opentimelineio.ErrorStatus)">eachChild</a></span>&#8203;(<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;searchRange,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Return a flat Stream of each child, limited to the search_range.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>&lt;T extends <a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;<br>java.util.stream.Stream&lt;T&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#eachChild(io.opentimeline.opentime.TimeRange,java.lang.Class,io.opentimeline.opentimelineio.ErrorStatus)">eachChild</a></span>&#8203;(<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;searchRange,
 java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Return a flat Stream of each child of specified type, limited to the search_range.</div>
+</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>java.util.stream.Stream&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#eachChild(io.opentimeline.opentimelineio.ErrorStatus)">eachChild</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Return a flat Stream of each child.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>&lt;T extends <a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;<br>java.util.stream.Stream&lt;T&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#eachChild(java.lang.Class,io.opentimeline.opentimelineio.ErrorStatus)">eachChild</a></span>&#8203;(java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Return a flat Stream of each child of specified type.</div>
+</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>java.util.stream.Stream&lt;<a href="Clip.html" title="class in io.opentimeline.opentimelineio">Clip</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#eachClip(io.opentimeline.opentime.TimeRange,io.opentimeline.opentimelineio.ErrorStatus)">eachClip</a></span>&#8203;(<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;searchRange,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Return a flat Stream of each clip, limited to the search_range.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>java.util.stream.Stream&lt;<a href="Clip.html" title="class in io.opentimeline.opentimelineio">Clip</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#eachClip(io.opentimeline.opentimelineio.ErrorStatus)">eachClip</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Return a flat Stream of each clip.</div>
+</td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>java.util.List&lt;<a href="Track.html" title="class in io.opentimeline.opentimelineio">Track</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAudioTracks()">getAudioTracks</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">This convenience method returns a list of the top-level audio tracks in
+ this timeline.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDuration(io.opentimeline.opentimelineio.ErrorStatus)">getDuration</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Get duration of this timeline.</div>
+</td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGlobalStartTime()">getGlobalStartTime</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Get global starting time value and rate of the timeline.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRangeOfChild(io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfChild</a></span>&#8203;(<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Range of the child object contained in this timeline.</div>
+</td>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code><a href="Stack.html" title="class in io.opentimeline.opentimelineio">Stack</a></code></td>
@@ -272,12 +294,17 @@ java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code>java.util.List&lt;<a href="Track.html" title="class in io.opentimeline.opentimelineio">Track</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getVideoTracks()">getVideoTracks</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">This convenience method returns a list of the top-level video tracks in
+ this timeline.</div>
+</td>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setGlobalStartTime(io.opentimeline.opentime.RationalTime)">setGlobalStartTime</a></span>&#8203;(<a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&nbsp;globalStartTime)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Set global starting time value and rate of the timeline.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code>void</code></td>
@@ -372,18 +399,35 @@ java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 <section class="detail">
 <h3><a id="getGlobalStartTime()">getGlobalStartTime</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a></span>&nbsp;<span class="memberName">getGlobalStartTime</span>()</div>
+<div class="block">Get global starting time value and rate of the timeline.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>global starting time value and rate of the timeline.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setGlobalStartTime(io.opentimeline.opentime.RationalTime)">setGlobalStartTime</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setGlobalStartTime</span>&#8203;(<span class="arguments"><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&nbsp;globalStartTime)</span></div>
+<div class="block">Set global starting time value and rate of the timeline.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>globalStartTime</code> - global starting time value and rate of the timeline.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getDuration(io.opentimeline.opentimelineio.ErrorStatus)">getDuration</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a></span>&nbsp;<span class="memberName">getDuration</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Get duration of this timeline.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report error while fetching duration</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>duration of the timeline.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -391,18 +435,38 @@ java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 <h3><a id="getRangeOfChild(io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfChild</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getRangeOfChild</span>&#8203;(<span class="arguments"><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Range of the child object contained in this timeline.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>child</code> - child Composable whose range is to be found.</dd>
+<dd><code>errorStatus</code> - errorStatus to report error while fetching range</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>range of the child object contained in this timeline.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getAudioTracks()">getAudioTracks</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.util.List&lt;<a href="Track.html" title="class in io.opentimeline.opentimelineio">Track</a>&gt;</span>&nbsp;<span class="memberName">getAudioTracks</span>()</div>
+<div class="block">This convenience method returns a list of the top-level audio tracks in
+ this timeline.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a list of the top-level audio tracks in this timeline</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getVideoTracks()">getVideoTracks</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.util.List&lt;<a href="Track.html" title="class in io.opentimeline.opentimelineio">Track</a>&gt;</span>&nbsp;<span class="memberName">getVideoTracks</span>()</div>
+<div class="block">This convenience method returns a list of the top-level video tracks in
+ this timeline.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a list of the top-level video tracks in this timeline</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -412,6 +476,18 @@ java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 <span class="returnType">java.util.stream.Stream&lt;T&gt;</span>&nbsp;<span class="memberName">eachChild</span>&#8203;(<span class="arguments"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;searchRange,
 java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Return a flat Stream of each child of specified type, limited to the search_range.
+ This recursively searches all compositions.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - type of children to fetch</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>searchRange</code> - TimeRange to search in</dd>
+<dd><code>descendedFrom</code> - only children who are a descendent of the descendedFrom type will be in the stream</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while iterating</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a Stream consisting of all the children of specified type in the composition in the order in which it is found</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -419,12 +495,29 @@ java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 <h3><a id="eachChild(io.opentimeline.opentime.TimeRange,io.opentimeline.opentimelineio.ErrorStatus)">eachChild</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.util.stream.Stream&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;</span>&nbsp;<span class="memberName">eachChild</span>&#8203;(<span class="arguments"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;searchRange,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Return a flat Stream of each child, limited to the search_range.
+ This recursively searches all compositions.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>searchRange</code> - TimeRange to search in</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while iterating</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a Stream consisting of all the children in the composition (in the searchRange) in the order in which it is found</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="eachChild(io.opentimeline.opentimelineio.ErrorStatus)">eachChild</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.util.stream.Stream&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;</span>&nbsp;<span class="memberName">eachChild</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Return a flat Stream of each child.
+ This recursively searches all compositions.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report any error while iterating</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a Stream consisting of all the children in the composition in the order in which it is found</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -433,6 +526,17 @@ java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="typeParameters">&lt;T extends <a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;</span>
 <span class="returnType">java.util.stream.Stream&lt;T&gt;</span>&nbsp;<span class="memberName">eachChild</span>&#8203;(<span class="arguments">java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Return a flat Stream of each child of specified type.
+ This recursively searches all compositions.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - type of children to fetch</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>descendedFrom</code> - only children who are a descendent of the descendedFrom type will be in the stream</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while iterating</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a Stream consisting of all the children of specified type in the composition in the order in which it is found</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -440,12 +544,27 @@ java.lang.Class&lt;T&gt;&nbsp;descendedFrom,
 <h3><a id="eachClip(io.opentimeline.opentime.TimeRange,io.opentimeline.opentimelineio.ErrorStatus)">eachClip</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.util.stream.Stream&lt;<a href="Clip.html" title="class in io.opentimeline.opentimelineio">Clip</a>&gt;</span>&nbsp;<span class="memberName">eachClip</span>&#8203;(<span class="arguments"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;searchRange,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Return a flat Stream of each clip, limited to the search_range.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>searchRange</code> - TimeRange to search in</dd>
+<dd><code>errorStatus</code> - errorStatus to report error while iterating</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a Stream of all clips in the timeline (in the searchRange) in the order they are found</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="eachClip(io.opentimeline.opentimelineio.ErrorStatus)">eachClip</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.util.stream.Stream&lt;<a href="Clip.html" title="class in io.opentimeline.opentimelineio">Clip</a>&gt;</span>&nbsp;<span class="memberName">eachClip</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Return a flat Stream of each clip.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report error while iterating</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a Stream of all clips in the timeline in the order they are found</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">

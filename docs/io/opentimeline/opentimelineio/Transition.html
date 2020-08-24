@@ -105,6 +105,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <pre>public class <span class="typeNameLabel">Transition</span>
 extends <a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a></pre>
+<div class="block">Represents a transition between two items.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -133,7 +134,9 @@ extends <a href="Composable.html" title="class in io.opentimeline.opentimelineio
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="Transition.Type.html" title="class in io.opentimeline.opentimelineio">Transition.Type</a></span></code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Encoding types of transitions.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -230,17 +233,23 @@ java.lang.String&nbsp;transitionType,
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getInOffset()">getInOffset</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Get amount of the previous clip this transition overlaps, exclusive.</div>
+</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOutOffset()">getOutOffset</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Get amount of the next clip this transition overlaps, exclusive.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRangeInParent(io.opentimeline.opentimelineio.ErrorStatus)">getRangeInParent</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Find and return the range of this item in the parent.</div>
+</td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>java.lang.String</code></td>
@@ -250,7 +259,9 @@ java.lang.String&nbsp;transitionType,
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTrimmedRangeInParent(io.opentimeline.opentimelineio.ErrorStatus)">getTrimmedRangeInParent</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Find and return the trimmed range of this item in the parent.</div>
+</td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>boolean</code></td>
@@ -260,12 +271,16 @@ java.lang.String&nbsp;transitionType,
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setInOffset(io.opentimeline.opentime.RationalTime)">setInOffset</a></span>&#8203;(<a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&nbsp;inOffset)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Set amount of the previous clip this transition overlaps, exclusive.</div>
+</td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setOutOffset(io.opentimeline.opentime.RationalTime)">setOutOffset</a></span>&#8203;(<a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&nbsp;outOffset)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Set amount of the next clip this transition overlaps, exclusive.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code>void</code></td>
@@ -379,24 +394,44 @@ java.lang.String&nbsp;transitionType,
 <section class="detail">
 <h3><a id="getInOffset()">getInOffset</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a></span>&nbsp;<span class="memberName">getInOffset</span>()</div>
+<div class="block">Get amount of the previous clip this transition overlaps, exclusive.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>amount of the previous clip this transition overlaps, exclusive.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setInOffset(io.opentimeline.opentime.RationalTime)">setInOffset</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setInOffset</span>&#8203;(<span class="arguments"><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&nbsp;inOffset)</span></div>
+<div class="block">Set amount of the previous clip this transition overlaps, exclusive.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>inOffset</code> - amount of the previous clip this transition overlaps, exclusive.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getOutOffset()">getOutOffset</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a></span>&nbsp;<span class="memberName">getOutOffset</span>()</div>
+<div class="block">Get amount of the next clip this transition overlaps, exclusive.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>amount of the next clip this transition overlaps, exclusive.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="setOutOffset(io.opentimeline.opentime.RationalTime)">setOutOffset</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">void</span>&nbsp;<span class="memberName">setOutOffset</span>&#8203;(<span class="arguments"><a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&nbsp;outOffset)</span></div>
+<div class="block">Set amount of the next clip this transition overlaps, exclusive.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>outOffset</code> - amount of the next clip this transition overlaps, exclusive.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -417,12 +452,26 @@ java.lang.String&nbsp;transitionType,
 <section class="detail">
 <h3><a id="getRangeInParent(io.opentimeline.opentimelineio.ErrorStatus)">getRangeInParent</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getRangeInParent</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Find and return the range of this item in the parent.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report error while fetching range</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the range of this item in the parent</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getTrimmedRangeInParent(io.opentimeline.opentimelineio.ErrorStatus)">getTrimmedRangeInParent</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></span>&nbsp;<span class="memberName">getTrimmedRangeInParent</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Find and return the trimmed range of this item in the parent.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>errorStatus</code> - errorStatus to report error while fetching trimmed range</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the trimmed range of this item in the parent.</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">

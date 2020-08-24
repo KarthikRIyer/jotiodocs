@@ -109,6 +109,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <pre>public class <span class="typeNameLabel">Track</span>
 extends <a href="Composition.html" title="class in io.opentimeline.opentimelineio">Composition</a></pre>
+<div class="block">A class that holds a list of Composables.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -137,7 +138,9 @@ extends <a href="Composition.html" title="class in io.opentimeline.opentimelinei
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="Track.NeighborGapPolicy.html" title="enum in io.opentimeline.opentimelineio">Track.NeighborGapPolicy</a></span></code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">enum for deciding how to add gap when asking for neighbors</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
@@ -245,13 +248,17 @@ java.lang.String&nbsp;kind,
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#eachClip(io.opentimeline.opentime.TimeRange,boolean,io.opentimeline.opentimelineio.ErrorStatus)">eachClip</a></span>&#8203;(<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;searchRange,
 boolean&nbsp;shallowSearch,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Return a flat Stream of each clip, limited to the search_range.</div>
+</td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>java.util.stream.Stream&lt;<a href="Clip.html" title="class in io.opentimeline.opentimelineio">Clip</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#eachClip(io.opentimeline.opentime.TimeRange,io.opentimeline.opentimelineio.ErrorStatus)">eachClip</a></span>&#8203;(<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;searchRange,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Return a flat Stream of each clip, limited to the search_range.</div>
+</td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a></code></td>
@@ -267,7 +274,7 @@ boolean&nbsp;shallowSearch,
 <td class="colLast">
 <div class="block">If media beyond the ends of this child are visible due to adjacent
  Transitions (only applicable in a Track) then this will return the
- head and tail offsets as a Pair of RationalTime objects.</div>
+ head and tail offsets as a tuple of RationalTime objects.</div>
 </td>
 </tr>
 <tr class="altColor" id="i4">
@@ -286,13 +293,15 @@ boolean&nbsp;shallowSearch,
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNeighborsOf(io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus,io.opentimeline.opentimelineio.Track.NeighborGapPolicy)">getNeighborsOf</a></span>&#8203;(<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;item,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus,
 <a href="Track.NeighborGapPolicy.html" title="enum in io.opentimeline.opentimelineio">Track.NeighborGapPolicy</a>&nbsp;neighborGapPolicy)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the neighbors of the item as a Pair, (previous, next).</div>
+</td>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code>java.util.HashMap&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>,&#8203;<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRangeOfAllChildren(io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfAllChildren</a></span>&#8203;(<a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</code></th>
 <td class="colLast">
-<div class="block">Return a HashMap mapping children to their range in this object.</div>
+<div class="block">Return a HashMap mapping children to their range in this track.</div>
 </td>
 </tr>
 <tr class="altColor" id="i8">
@@ -442,11 +451,10 @@ java.lang.String&nbsp;kind,
 <h3><a id="getHandlesOfChild(io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">getHandlesOfChild</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/Pair.html" title="class in io.opentimeline.util">Pair</a>&lt;<a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>,&#8203;<a href="../opentime/RationalTime.html" title="class in io.opentimeline.opentime">RationalTime</a>&gt;</span>&nbsp;<span class="memberName">getHandlesOfChild</span>&#8203;(<span class="arguments"><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;child,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="Composition.html#getHandlesOfChild(io.opentimeline.opentimelineio.Composable,io.opentimeline.opentimelineio.ErrorStatus)">Composition</a></code></span></div>
 <div class="block">If media beyond the ends of this child are visible due to adjacent
  Transitions (only applicable in a Track) then this will return the
- head and tail offsets as a Pair of RationalTime objects. If no handles
- are present on either side, then null is returned instead of a
+ head and tail offsets as a tuple of RationalTime objects. If no handles
+ are present on either side, then None is returned instead of a
  RationalTime.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -472,21 +480,41 @@ java.lang.String&nbsp;kind,
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType"><a href="../util/Pair.html" title="class in io.opentimeline.util">Pair</a>&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>,&#8203;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&gt;</span>&nbsp;<span class="memberName">getNeighborsOf</span>&#8203;(<span class="arguments"><a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>&nbsp;item,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus,
 <a href="Track.NeighborGapPolicy.html" title="enum in io.opentimeline.opentimelineio">Track.NeighborGapPolicy</a>&nbsp;neighborGapPolicy)</span></div>
+<div class="block">Returns the neighbors of the item as a Pair, (previous, next).
+ Can optionally fill in gaps when transitions have no gaps next to them.
+ with neighborGapPolicy == NeighborGapPolicy.never:
+ [A, B, C] :: getNeighborsOf(B) -&gt; (A, C)
+ [A, B, C] :: getNeighborsOf(A) -&gt; (null, B)
+ [A, B, C] :: getNeighborsOf(C) -&gt; (B, null)
+ [A] :: getNeighborsOf(A) -&gt; (null, null)
+ with neighborGapPolicy == NeighborGapPolicy.around_transitions:
+ (assuming A and C are transitions)
+ [A, B, C] :: getNeighborsOf(B) -&gt; (A, C)
+ [A, B, C] :: getNeighborsOf(A) -&gt; (Gap, B)
+ [A, B, C] :: getNeighborsOf(C) -&gt; (B, Gap)
+ [A] :: getNeighborsOf(A) -&gt; (Gap, Gap)</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>item</code> - Composable whose neighbors are to be fetched</dd>
+<dd><code>errorStatus</code> - errorStatus to report error while fetching neighbors</dd>
+<dd><code>neighborGapPolicy</code> - optionally fill in gaps when transitions have no gaps next to them? [never, around_transitions]</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>neighbors of the item as a Pair</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
 <section class="detail">
 <h3><a id="getRangeOfAllChildren(io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfAllChildren</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.util.HashMap&lt;<a href="Composable.html" title="class in io.opentimeline.opentimelineio">Composable</a>,&#8203;<a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&gt;</span>&nbsp;<span class="memberName">getRangeOfAllChildren</span>&#8203;(<span class="arguments"><a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="Composition.html#getRangeOfAllChildren(io.opentimeline.opentimelineio.ErrorStatus)">Composition</a></code></span></div>
-<div class="block">Return a HashMap mapping children to their range in this object.</div>
+<div class="block">Return a HashMap mapping children to their range in this track.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Composition.html#getRangeOfAllChildren(io.opentimeline.opentimelineio.ErrorStatus)">getRangeOfAllChildren</a></code>&nbsp;in class&nbsp;<code><a href="Composition.html" title="class in io.opentimeline.opentimelineio">Composition</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>errorStatus</code> - errorStatus to report any error while fetching ranges</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a HashMap mapping children to their range in this object</dd>
+<dd>a HashMap mapping children to their range in this track.</dd>
 </dl>
 </section>
 </li>
@@ -496,6 +524,15 @@ java.lang.String&nbsp;kind,
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.util.stream.Stream&lt;<a href="Clip.html" title="class in io.opentimeline.opentimelineio">Clip</a>&gt;</span>&nbsp;<span class="memberName">eachClip</span>&#8203;(<span class="arguments"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;searchRange,
 boolean&nbsp;shallowSearch,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Return a flat Stream of each clip, limited to the search_range.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>searchRange</code> - TimeRange to search in</dd>
+<dd><code>shallowSearch</code> - should the algorithm recurse into compositions or not?</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while iterating</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a Stream of all clips in the timeline (in the searchRange) in the order they are found</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">
@@ -503,6 +540,15 @@ boolean&nbsp;shallowSearch,
 <h3><a id="eachClip(io.opentimeline.opentime.TimeRange,io.opentimeline.opentimelineio.ErrorStatus)">eachClip</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">java.util.stream.Stream&lt;<a href="Clip.html" title="class in io.opentimeline.opentimelineio">Clip</a>&gt;</span>&nbsp;<span class="memberName">eachClip</span>&#8203;(<span class="arguments"><a href="../opentime/TimeRange.html" title="class in io.opentimeline.opentime">TimeRange</a>&nbsp;searchRange,
 <a href="ErrorStatus.html" title="class in io.opentimeline.opentimelineio">ErrorStatus</a>&nbsp;errorStatus)</span></div>
+<div class="block">Return a flat Stream of each clip, limited to the search_range.
+ This recurses into compositions.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>searchRange</code> - TimeRange to search in</dd>
+<dd><code>errorStatus</code> - errorStatus to report any error while iterating</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a Stream of all clips in the timeline (in the searchRange) in the order they are found</dd>
+</dl>
 </section>
 </li>
 </ul>

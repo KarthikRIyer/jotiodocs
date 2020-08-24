@@ -93,6 +93,14 @@ loadScripts(document, 'script');</script>
 <hr>
 <pre>public class <span class="typeNameLabel">OTIOFactory</span>
 extends java.lang.Object</pre>
+<div class="block">A singleton factory class that helps in creating all OTIO objects.
+ It is expected that the developers use this Factory to create objects and not the Classes' constructors.
+ After creation of each object the Factory adds a PhantomReference of the object to a ReferenceQueue.
+ Whenever the object is Garbage Collected it will be available for polling in the reference queue and
+ the native memory allocated for the object can be freed.
+ <p>
+ The factory does some minor cleanup everytime you interact with it, but the developers are expected to
+ setup a mechanism to call the cleanUp() method at regular intervals.</div>
 </section>
 <section class="summary">
 <ul class="blockList">

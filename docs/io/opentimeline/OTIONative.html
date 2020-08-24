@@ -98,6 +98,10 @@ loadScripts(document, 'script');</script>
 <pre>public class <span class="typeNameLabel">OTIONative</span>
 extends java.lang.Object
 implements java.lang.AutoCloseable</pre>
+<div class="block">A class that holds the native handle and class name of an OTIO object.
+ It implements the AutoCloseable interface which adds the close() method.
+ This method can be called to free the native memory and is called automatically
+ on exit from scope when this object will be declared in a try-with-resources block.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
@@ -184,7 +188,9 @@ implements java.lang.AutoCloseable</pre>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOTIOObjectNativeHandle()">getOTIOObjectNativeHandle</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">This method returns the native handle of the actual native object.</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -250,6 +256,13 @@ implements java.lang.AutoCloseable</pre>
 <section class="detail">
 <h3><a id="getOTIOObjectNativeHandle()">getOTIOObjectNativeHandle</a></h3>
 <div class="memberSignature"><span class="modifiers">public</span>&nbsp;<span class="returnType">long</span>&nbsp;<span class="memberName">getOTIOObjectNativeHandle</span>()</div>
+<div class="block">This method returns the native handle of the actual native object.
+ It can be used to check if two different Java objects hold reference to the same native object.
+ This is used to generate hash codes for OTIO objects so that they can be added to HashMaps.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>native handle of the actual native object</dd>
+</dl>
 </section>
 </li>
 <li class="blockList">

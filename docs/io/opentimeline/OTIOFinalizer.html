@@ -97,6 +97,12 @@ loadScripts(document, 'script');</script>
 <hr>
 <pre>public class <span class="typeNameLabel">OTIOFinalizer</span>
 extends java.lang.ref.PhantomReference&lt;<a href="OTIONative.html" title="class in io.opentimeline">OTIONative</a>&gt;</pre>
+<div class="block">A finalizer class for internal use of the library.
+ It extends PhantomReference&lt;&gt; and stores
+ the class name and native handle of the object whose reference it holds.
+ <p>
+ The OTIOFactory will call the cleanUp() method of this class to free native memory allocated
+ after the Java object is Garbage Collected.</div>
 </section>
 <section class="summary">
 <ul class="blockList">
